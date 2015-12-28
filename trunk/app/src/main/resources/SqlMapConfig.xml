@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMapConfig PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+	<!-- Settings de control SqlMap -->
+	<settings
+		cacheModelsEnabled="true"
+		enhancementEnabled="true"
+		lazyLoadingEnabled="true"
+		maxRequests="32"
+		maxSessions="10"
+		maxTransactions="5"
+		useStatementNamespaces="true"
+	/>
+
+
+	<!-- Configuración de un datasource para usar con este SQL Map con SimpleDataSource. 
+	<transactionManager type="JDBC" >
+		<dataSource type="SIMPLE">
+			<property name="JDBC.Driver" value="oracle.jdbc.driver.OracleDriver"/>
+			<property name="JDBC.ConnectionURL" value="jdbc:oracle:thin:@10.100.79.32:1521:xe"/>
+			<property name="JDBC.Username" value="factmex"/>
+			<property name="JDBC.Password" value="factmex"/>
+		</dataSource>
+	</transactionManager>
+	-->
+	
+	<transactionManager type="JDBC" >
+		<dataSource type="SIMPLE">
+			<property name="JDBC.Driver" value="org.sqlite.JDBC"/>
+			<property name="JDBC.ConnectionURL" value="${jdbc.url}"/>
+			<property name="JDBC.Username" value=""/>
+			<property name="JDBC.Password" value=""/>
+		</dataSource>
+	</transactionManager>
+
+	<!-- Identificar todos los  ficheros SQL Map XML que van a ser cargados por ese SQL map.
+	     Darse cuenta que las rutas son relativas al classpath. En este ejmplo, sólo tenemos uno -->
+	<sqlMap resource="mx/com/factmex/app/server/sqlmaps/sql/C_COMPANIA_SqlMap.xml" />
+	<sqlMap resource="mx/com/factmex/app/server/sqlmaps/sql/C_ESTATUS_SqlMap.xml" />
+	<sqlMap resource="mx/com/factmex/app/server/sqlmaps/sql/C_PARAMETRO_SqlMap.xml" />
+	<sqlMap resource="mx/com/factmex/app/server/sqlmaps/sql/C_PERFIL_SqlMap.xml" />
+	<sqlMap resource="mx/com/factmex/app/server/sqlmaps/sql/C_TIPO_COMPROBANTE_SqlMap.xml" />
+	<sqlMap resource="mx/com/factmex/app/server/sqlmaps/sql/C_TIPO_CONTACTO_SqlMap.xml" />
+	<sqlMap resource="mx/com/factmex/app/server/sqlmaps/sql/C_TIPO_DIRECCION_SqlMap.xml" />
+	<sqlMap resource="mx/com/factmex/app/server/sqlmaps/sql/C_TIPO_PERSONA_SqlMap.xml" />
+	<sqlMap resource="mx/com/factmex/app/server/sqlmaps/sql/T_CLIENTE_SqlMap.xml" />
+	<sqlMap resource="mx/com/factmex/app/server/sqlmaps/sql/T_COMPROBANTE_SqlMap.xml" />
+	<sqlMap resource="mx/com/factmex/app/server/sqlmaps/sql/T_CONTACTO_SqlMap.xml" />
+	<sqlMap resource="mx/com/factmex/app/server/sqlmaps/sql/T_DIRECCION_SqlMap.xml" />
+	<sqlMap resource="mx/com/factmex/app/server/sqlmaps/sql/T_EMISOR_SqlMap.xml" />
+	<sqlMap resource="mx/com/factmex/app/server/sqlmaps/sql/T_PRODUCTO_SERVICIO_SqlMap.xml" />
+	<sqlMap resource="mx/com/factmex/app/server/sqlmaps/sql/T_SERIE_SqlMap.xml" />
+	<sqlMap resource="mx/com/factmex/app/server/sqlmaps/sql/T_USUARIO_SqlMap.xml" />
+
+</sqlMapConfig>

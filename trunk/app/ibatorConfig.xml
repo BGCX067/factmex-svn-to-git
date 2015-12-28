@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ibatorConfiguration PUBLIC "-//Apache Software Foundation//DTD Apache iBATIS Ibator Configuration 1.0//EN" "http://ibatis.apache.org/dtd/ibator-config_1_0.dtd" >
+<ibatorConfiguration >
+	<classPathEntry location="C:/temp/sqlite-jdbc-3.6.16.jar"/>
+  <ibatorContext id="context1" >
+    <jdbcConnection driverClass="org.sqlite.JDBC" connectionURL="jdbc:sqlite:D:\\Documents and Settings\\aguerrero\\Mis documentos\\FacturacionElectronica\\Workspace\\app\\src\\main\\resources\\db\\factmex.db" userId="" password="" />
+    <javaModelGenerator targetPackage="mx.com.factmex.app.server.sqlmaps.model" targetProject="app" />
+    <sqlMapGenerator targetPackage="mx.com.factmex.app.server.sqlmaps.sql" targetProject="app" />
+    <daoGenerator targetPackage="mx.com.factmex.app.server.sqlmaps.dao" targetProject="app" type="GENERIC-CI" />
+    
+
+    <table tableName="C_COMPANIA" />
+    <table tableName="C_ESTATUS" />
+    <table tableName="C_PARAMETRO" />
+    <table tableName="C_PERFIL" />
+    <table tableName="C_TIPO_COMPROBANTE" />
+    <table tableName="C_TIPO_CONTACTO" />
+    <table tableName="C_TIPO_DIRECCION" />
+    <table tableName="C_TIPO_PERSONA" />
+    <table tableName="T_CLIENTE" />  
+    <table tableName="T_COMPROBANTE" />
+    <table tableName="T_CONTACTO" />
+    <table tableName="T_DIRECCION" />
+    <table tableName="T_EMISOR" />
+    <table tableName="T_PRODUCTO_SERVICIO" />
+    <table tableName="T_SERIE" />
+    <table tableName="T_USUARIO" />    
+  </ibatorContext>
+  
+</ibatorConfiguration>
